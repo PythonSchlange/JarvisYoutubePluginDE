@@ -1,5 +1,0 @@
-*STARTE*MUSIK (*)*==echo "$(jv_pg_yt_ms_pl_search "(1)")"
-*SPIELE*MUSIK VON (*)*==echo "$(jv_pg_yt_ms_pl_search "(1)")"
-*SPIELE*SONG VON (*)*==echo "$(jv_pg_yt_ms_pl_search "(1)")"
-STOPPE*MUSIK|HÖRE*AUF*MUSIK*ZU*SPIELEN== killall cvlc; say "Es wurde gestoppt !"
-

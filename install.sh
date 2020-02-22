@@ -1,7 +1,15 @@
-#!/bin/bash
-# This file will be automatically sourced at the installation of your plugin
-# Use only if you need to perform changes on the user system such as installing software
-sudo apt-get update && apt-get install vlc nohup
-sudo apt-get remove -y youtube-dl
-sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
+#!/usr/bin/env bash
+
+# Install pip (needed to install and upgrade youtube video downloader)
+[[ -z $(which pip) ]] && sudo apt-get --yes --force-yes install python-pip
+[[ -z $(which pip3) ]] && sudo apt-get --yes --force-yes install python3-pip
+
+# Install Youtube video downloader (Youtube-dl)
+[[ -z $(which youtube-dl) ]] && sudo add-apt-repository ppa:rvm/smplayer -y ; sudo apt-get update ; sudo apt-get --yes --force-yes install youtube-dl
+
+# Upgrade Youtube video downloader (youtube can change its way of working... this upgrade may be needed sometimes even after the install)
+sudo pip install --upgrade youtube-dl
+sudo pip3 install --upgrade youtube-dl
+
+# Install music player
+[[ -z $(which mplayer) ]] && sudo apt-get --yes --force-yes install mplayer

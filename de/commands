@@ -1,5 +1,6 @@
-*STARTE*MUSIK (*)*==echo "$(jv_pg_yt_ms_pl_search "(1)")"
-*SPIELE*MUSIK VON (*)*==echo "$(jv_pg_yt_ms_pl_search "(1)")"
-*SPIELE*SONG VON (*)*==echo "$(jv_pg_yt_ms_pl_search "(1)")"
-STOPPE*MUSIK|HÖRE*AUF*MUSIK*ZU*SPIELEN== killall cvlc; say "Es wurde gestoppt !"
-
+*YOUTUBE*MUSIK*|*MUSIK*==say "Welches Lied möchtest du spielen ?"
+>(*)==song="(1)" && jv_pg_yp_play_song "$song" && say "Das Lied $song wird bald veröffentlicht."
+*YOUTUBE*VIDEO*|*VIDEO*==say "Welches Video möchten Sie starten ?"
+>(*)==video="(1)" && jv_pg_yp_play_video "$video" && say "Das Video $video wird bald veröffentlicht."
+*STOPPE*VIDEO*|*VIDEO*STOPPEN*==jv_pg_yp_stop && say "Video gestoppt."
+*STOPPE*MUSIK*|*MUSIK*STOPPEN*==jv_pg_yp_stop && say "Musik gestoppt."

@@ -6,12 +6,12 @@
 # 3) remove and add your own translations
 # 4) you can the arguments $2, $3 passed to this function
 # 5) in your plugin functions.sh file, use it like this:
-#      say "$(pv_myplugin_lang the_answer_is "Ja")"
+#      say "$(pv_myplugin_lang the_answer_is "oui")"
 #      => Jarvis: La réponse est oui
 
-#pg_PythonSchlange_lang () {
+#pv_XXX_lang () {
 #    case "$1" in
-#        i_check) echo "Ich höre zu...";;
-#        the_answer_is) echo "Die Antwort ist $2";;
+#        i_check) echo "Je regarde...";;
+#        the_answer_is) echo "La réponse est $2";;
 #    esac
 #} 
